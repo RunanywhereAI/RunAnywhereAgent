@@ -5,13 +5,13 @@ AI-powered coding agent backed by Claude on AWS Bedrock.
 ## Install (Mac / Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OWNER/agent/main/install.sh | bash -s -- YOUR_TOKEN
+curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash -s -- YOUR_TOKEN
 ```
 
 ## Install (Windows PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/OWNER/agent/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.ps1 | iex
 ```
 
 ## Usage

@@ -27,7 +27,7 @@ case "${1:-help}" in
     echo "  Budget: \$$BUDGET/month"
     echo ""
     echo "  Send them this:"
-    echo "    curl -fsSL https://raw.githubusercontent.com/OWNER/agent/main/install.sh | bash -s -- $KEY"
+    echo "    curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash -s -- $KEY"
     echo ""
     ;;
   list)

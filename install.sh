@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ── RunanywhereAI — One-line installer ───────────────────────────────
-# Usage: curl -fsSL https://raw.githubusercontent.com/OWNER/agent/main/install.sh | bash -s -- YOUR_TOKEN
+# Usage: curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash -s -- YOUR_TOKEN
 # Or:    bash install.sh YOUR_TOKEN
 
 GREEN='\033[0;32m'
