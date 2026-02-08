@@ -1,0 +1,3 @@
+admin/.env
+*.bak
+.DS_Store
