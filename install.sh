@@ -66,7 +66,7 @@ cat > "$CONFIG_DIR/opencode.json" << 'CONF'
       }
     }
   },
-  "model": "runanywhereai/claude-sonnet-4",
+  "model": "runanywhereai/claude-haiku-4",
   "small_model": "runanywhereai/claude-haiku-4"
 }
 CONF

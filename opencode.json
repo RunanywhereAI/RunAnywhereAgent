@@ -38,6 +38,6 @@
       }
     }
   },
-  "model": "runanywhereai/claude-sonnet-4",
+  "model": "runanywhereai/claude-haiku-4",
   "small_model": "runanywhereai/claude-haiku-4"
 }

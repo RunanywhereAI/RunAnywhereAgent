@@ -50,7 +50,7 @@ if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir -Force | Ou
       }
     }
   },
-  "model": "runanywhereai/claude-sonnet-4",
+  "model": "runanywhereai/claude-haiku-4",
   "small_model": "runanywhereai/claude-haiku-4"
 }
 '@ | Set-Content -Path (Join-Path $dir "opencode.json") -Encoding UTF8
