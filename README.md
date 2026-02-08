@@ -2,13 +2,15 @@
 
 AI-powered coding agent backed by Claude on AWS Bedrock.
 
-## Install (Mac / Linux)
+## Install
+
+**Mac / Linux** (one command):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash -s -- YOUR_TOKEN
+curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash
 ```
 
-## Install (Windows PowerShell)
+**Windows** (PowerShell, one command):
 
 ```powershell
 irm https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.ps1 | iex
@@ -16,15 +18,10 @@ irm https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/instal
 
 ## Usage
 
+Restart your terminal after install, then in any project:
+
 ```bash
 opencode
 ```
 
-That's it. Opens an interactive coding agent in your terminal.
-
-## What You Get
-
-- Claude Sonnet 4 — primary coding model
-- Claude Haiku 4 — fast model for quick tasks
-- File editing, bash execution, code search, and more
-- Works in any project directory
+That's it. You get an interactive AI coding agent with Claude Sonnet 4.

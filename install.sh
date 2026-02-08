@@ -2,16 +2,13 @@
 set -euo pipefail
 
 # ── RunanywhereAI — One-line installer ───────────────────────────────
-# Usage: curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash -s -- YOUR_TOKEN
-# Or:    bash install.sh YOUR_TOKEN
+# Usage: curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.sh | bash
 
 GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
-RED='\033[0;31m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
-TOKEN="${1:-}"
+TOKEN="${1:-REDACTED}"
 CONFIG_DIR="$HOME/.config/opencode"
 
 echo ""
@@ -33,7 +30,6 @@ fi
 
 # ── Write config ─────────────────────────────────────────────────────
 mkdir -p "$CONFIG_DIR"
-[ -f "$CONFIG_DIR/opencode.json" ] && cp "$CONFIG_DIR/opencode.json" "$CONFIG_DIR/opencode.json.bak" 2>/dev/null
 
 cat > "$CONFIG_DIR/opencode.json" << 'CONF'
 {
@@ -76,12 +72,6 @@ cat > "$CONFIG_DIR/opencode.json" << 'CONF'
 CONF
 
 # ── Set token ────────────────────────────────────────────────────────
-if [ -z "$TOKEN" ]; then
-  echo -e "${BOLD}Enter your RunanywhereAI token:${RESET}"
-  read -rp "  Token: " TOKEN
-  [ -z "$TOKEN" ] && { echo -e "${RED}No token. Set it later: export RUNANYWHEREAI_KEY=your-token${RESET}"; exit 1; }
-fi
-
 SHELL_NAME=$(basename "${SHELL:-bash}")
 case "$SHELL_NAME" in
   zsh)  PROFILE="$HOME/.zshrc" ;;
@@ -89,7 +79,6 @@ case "$SHELL_NAME" in
   *)    PROFILE="${HOME}/.bashrc" ; [ -f "$HOME/.bash_profile" ] && PROFILE="$HOME/.bash_profile" ;;
 esac
 
-# Remove old entry, add new
 grep -v "RUNANYWHEREAI_KEY" "$PROFILE" > "$PROFILE.tmp" 2>/dev/null || true
 mv "$PROFILE.tmp" "$PROFILE" 2>/dev/null || true
 
@@ -98,10 +87,7 @@ if [ "$SHELL_NAME" = "fish" ]; then
 else
   echo "export RUNANYWHEREAI_KEY=$TOKEN" >> "$PROFILE"
 fi
-export RUNANYWHEREAI_KEY="$TOKEN"
 
 # ── Done ─────────────────────────────────────────────────────────────
-echo ""
-echo -e "${GREEN}${BOLD}Done!${RESET} Run ${BOLD}opencode${RESET} in any project to start coding."
-echo -e "  (Restart your terminal or run: source $PROFILE)"
+echo -e "${GREEN}${BOLD}Done!${RESET} Restart your terminal, then run: ${BOLD}opencode${RESET}"
 echo ""
