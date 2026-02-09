@@ -10,6 +10,7 @@ RESET='\033[0m'
 
 TOKEN="${1:-REDACTED}"
 CONFIG_DIR="$HOME/.config/opencode"
+CONFIG_URL="https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/opencode.json"
 
 echo ""
 echo -e "${BOLD}RunanywhereAI — AI Coding Agent${RESET}"
@@ -28,48 +29,9 @@ if ! command -v opencode &>/dev/null; then
   echo ""
 fi
 
-# ── Write config ─────────────────────────────────────────────────────
+# ── Write config (download from repo) ────────────────────────────────
 mkdir -p "$CONFIG_DIR"
-
-cat > "$CONFIG_DIR/opencode.json" << 'CONF'
-{
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "runanywhereai": {
-      "name": "RunanywhereAI",
-      "env": ["RUNANYWHEREAI_KEY"],
-      "options": {
-        "baseURL": "http://54.226.134.16/v1",
-        "apiKey": "{env:RUNANYWHEREAI_KEY}"
-      },
-      "models": {
-        "claude-sonnet-4": {
-          "name": "Claude Sonnet 4",
-          "attachment": true,
-          "reasoning": true,
-          "tool_call": true,
-          "temperature": false,
-          "release_date": "2025-05-14",
-          "limit": { "context": 200000, "output": 64000 },
-          "options": {}
-        },
-        "claude-haiku-4": {
-          "name": "Claude Haiku 4",
-          "attachment": true,
-          "reasoning": false,
-          "tool_call": true,
-          "temperature": false,
-          "release_date": "2025-10-01",
-          "limit": { "context": 200000, "output": 64000 },
-          "options": {}
-        }
-      }
-    }
-  },
-  "model": "runanywhereai/claude-haiku-4",
-  "small_model": "runanywhereai/claude-haiku-4"
-}
-CONF
+curl -fsSL "$CONFIG_URL" -o "$CONFIG_DIR/opencode.json"
 
 # ── Set token ────────────────────────────────────────────────────────
 SHELL_NAME=$(basename "${SHELL:-bash}")
