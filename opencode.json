@@ -5,7 +5,7 @@
       "name": "RunanywhereAI",
       "env": ["RUNANYWHEREAI_KEY"],
       "options": {
-        "baseURL": "http://54.226.134.16/v1",
+        "baseURL": "http://98.93.50.20/v1",
         "apiKey": "{env:RUNANYWHEREAI_KEY}"
       },
       "models": {
