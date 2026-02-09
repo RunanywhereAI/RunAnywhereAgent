@@ -10,81 +10,88 @@
       },
       "models": {
         "claude-sonnet-4": {
-          "name": "Claude Sonnet 4",
-          "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
-          "release_date": "2025-05-14",
-          "limit": { "context": 200000, "output": 64000 },
-          "options": {}
+          "name": "Claude Sonnet 4", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-05-14", "limit": { "context": 200000, "output": 64000 }, "options": {}
         },
         "claude-haiku-4": {
-          "name": "Claude Haiku 4.5",
-          "attachment": true, "reasoning": false, "tool_call": true, "temperature": false,
-          "release_date": "2025-10-01",
-          "limit": { "context": 200000, "output": 64000 },
-          "options": {}
+          "name": "Claude Haiku 4.5", "attachment": true, "reasoning": false, "tool_call": true, "temperature": false,
+          "release_date": "2025-10-01", "limit": { "context": 200000, "output": 64000 }, "options": {}
         },
         "claude-sonnet-4-5": {
-          "name": "Claude Sonnet 4.5",
-          "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
-          "release_date": "2025-09-29",
-          "limit": { "context": 200000, "output": 64000 },
-          "options": {}
+          "name": "Claude Sonnet 4.5", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-09-29", "limit": { "context": 200000, "output": 64000 }, "options": {}
         },
         "claude-opus-4": {
-          "name": "Claude Opus 4",
-          "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
-          "release_date": "2025-05-14",
-          "limit": { "context": 200000, "output": 32000 },
-          "options": {}
+          "name": "Claude Opus 4", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-05-14", "limit": { "context": 200000, "output": 32000 }, "options": {}
+        },
+        "claude-opus-4-1": {
+          "name": "Claude Opus 4.1", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-08-05", "limit": { "context": 200000, "output": 32000 }, "options": {}
+        },
+        "claude-opus-4-6": {
+          "name": "Claude Opus 4.6", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-11-01", "limit": { "context": 200000, "output": 32000 }, "options": {}
+        },
+        "claude-3-7-sonnet": {
+          "name": "Claude 3.7 Sonnet", "attachment": true, "reasoning": true, "tool_call": true, "temperature": false,
+          "release_date": "2025-02-19", "limit": { "context": 200000, "output": 64000 }, "options": {}
+        },
+        "claude-3-5-sonnet": {
+          "name": "Claude 3.5 Sonnet v2", "attachment": true, "reasoning": false, "tool_call": true, "temperature": false,
+          "release_date": "2024-10-22", "limit": { "context": 200000, "output": 8192 }, "options": {}
+        },
+        "claude-3-5-haiku": {
+          "name": "Claude 3.5 Haiku", "attachment": true, "reasoning": false, "tool_call": true, "temperature": false,
+          "release_date": "2024-10-22", "limit": { "context": 200000, "output": 8192 }, "options": {}
         },
         "deepseek-r1": {
-          "name": "DeepSeek R1",
-          "attachment": false, "reasoning": true, "tool_call": true, "temperature": true,
-          "release_date": "2025-01-20",
-          "limit": { "context": 128000, "output": 32000 },
-          "options": {}
+          "name": "DeepSeek R1", "attachment": false, "reasoning": true, "tool_call": true, "temperature": true,
+          "release_date": "2025-01-20", "limit": { "context": 128000, "output": 32000 }, "options": {}
         },
         "deepseek-v3": {
-          "name": "DeepSeek V3.2",
-          "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2025-06-01",
-          "limit": { "context": 128000, "output": 32000 },
-          "options": {}
+          "name": "DeepSeek V3.2", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2025-06-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
         },
         "llama4-maverick": {
-          "name": "Llama 4 Maverick",
-          "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2025-04-05",
-          "limit": { "context": 128000, "output": 32000 },
-          "options": {}
+          "name": "Llama 4 Maverick", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2025-04-05", "limit": { "context": 128000, "output": 32000 }, "options": {}
         },
         "llama4-scout": {
-          "name": "Llama 4 Scout",
-          "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2025-04-05",
-          "limit": { "context": 128000, "output": 32000 },
-          "options": {}
+          "name": "Llama 4 Scout", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2025-04-05", "limit": { "context": 128000, "output": 32000 }, "options": {}
+        },
+        "llama3-3-70b": {
+          "name": "Llama 3.3 70B", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2024-12-06", "limit": { "context": 128000, "output": 32000 }, "options": {}
         },
         "mistral-large": {
-          "name": "Mistral Large 3",
-          "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2025-03-01",
-          "limit": { "context": 128000, "output": 32000 },
-          "options": {}
+          "name": "Mistral Large 3", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2025-03-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
+        },
+        "qwen3-coder": {
+          "name": "Qwen3 Coder Next", "attachment": false, "reasoning": true, "tool_call": true, "temperature": true,
+          "release_date": "2025-07-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
+        },
+        "qwen3-next-80b": {
+          "name": "Qwen3 Next 80B", "attachment": false, "reasoning": true, "tool_call": true, "temperature": true,
+          "release_date": "2025-06-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
+        },
+        "gpt-oss-120b": {
+          "name": "GPT OSS 120B", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2025-06-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
         },
         "nova-pro": {
-          "name": "Amazon Nova Pro",
-          "attachment": true, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2024-12-01",
-          "limit": { "context": 300000, "output": 5000 },
-          "options": {}
+          "name": "Amazon Nova Pro", "attachment": true, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2024-12-01", "limit": { "context": 300000, "output": 5000 }, "options": {}
         },
         "nova-micro": {
-          "name": "Amazon Nova Micro",
-          "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
-          "release_date": "2024-12-01",
-          "limit": { "context": 128000, "output": 5000 },
-          "options": {}
+          "name": "Amazon Nova Micro", "attachment": false, "reasoning": false, "tool_call": true, "temperature": true,
+          "release_date": "2024-12-01", "limit": { "context": 128000, "output": 5000 }, "options": {}
+        },
+        "kimi-k2-5": {
+          "name": "Kimi K2.5", "attachment": false, "reasoning": true, "tool_call": true, "temperature": true,
+          "release_date": "2025-07-01", "limit": { "context": 128000, "output": 32000 }, "options": {}
         }
       }
     }
