@@ -2,10 +2,16 @@
 # Usage: irm https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
-$Token = "REDACTED"
 $ConfigUrl = "https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/opencode.json"
 
 Write-Host "`nRunanywhereAI — AI Coding Agent`n" -ForegroundColor Cyan
+
+# ── Get token from user ─────────────────────────────────────────
+$Token = Read-Host "Paste your access token"
+if ([string]::IsNullOrWhiteSpace($Token)) {
+    Write-Host "ERROR: Token is required. Get one from your hackathon organizer." -ForegroundColor Red
+    exit 1
+}
 
 if (-not (Get-Command opencode -ErrorAction SilentlyContinue)) {
     Write-Host "Installing OpenCode..." -ForegroundColor Green

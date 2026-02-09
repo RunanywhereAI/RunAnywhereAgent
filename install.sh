@@ -8,13 +8,23 @@ GREEN='\033[0;32m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
-TOKEN="${1:-REDACTED}"
 CONFIG_DIR="$HOME/.config/opencode"
 CONFIG_URL="https://raw.githubusercontent.com/RunanywhereAI/RunAnywhereAgent/main/opencode.json"
 
 echo ""
 echo -e "${BOLD}RunanywhereAI — AI Coding Agent${RESET}"
 echo ""
+
+# ── Get token from argument or prompt ─────────────────────────────
+TOKEN="${1:-}"
+if [ -z "$TOKEN" ]; then
+  echo -n "Paste your access token: "
+  read -r TOKEN
+  if [ -z "$TOKEN" ]; then
+    echo "ERROR: Token is required. Get one from your hackathon organizer."
+    exit 1
+  fi
+fi
 
 # ── Install opencode if missing ──────────────────────────────────────
 if ! command -v opencode &>/dev/null; then
